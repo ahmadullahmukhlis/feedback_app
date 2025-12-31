@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1020906582315",
+    "project_id": "eshop-minimal-rj0zf",
+    "storage_bucket": "eshop-minimal-rj0zf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020906582315:android:e0cde25941f61f8f91956e",
+        "android_client_info": {
+          "package_name": "com.example.aps_feedback"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwoTeE49ucN2foKQP1hWtk3hpx87jOmHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

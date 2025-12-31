@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.q-field__bottom{
+    padding: 5px 12px 0px !important;
+}
+@layer base {
+    body{
+      @apply !bg-gray-100 !overflow-hidden
+    }
+    .barcode-sheet {
+      display: flex;
+      flex-wrap: wrap;
+      width: 210mm; /* A4 width in mm */
+      margin: 0 auto;
+  }
+  .barcode-40 {
+    width: calc(25% - 10px); /* 4 barcodes per row with some spacing */
+  }
+  .prose{
+    @apply !max-w-full !text-sm
+  }
+}

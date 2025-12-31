@@ -1,0 +1,68 @@
+{
+  "@@locale": "en",
+  "home": "Home",
+  "settings": "Settings",
+  "app_name" : "Afghan Payment System",
+  "services":"Services",
+  "support":"Support",
+  "notification": "Notification",
+  "notification_mn":"Manage your notifications",
+    "notification_p": "Notification permission denied!",
+    "notification_c": "To disable notifications, change system settings.",
+    "language": "Language",
+    "theme": "Theme",
+    "privacy_security": "Privacy & Security",
+    "help_support": "Help & Support",
+    "about": "About",
+    "logout": "Logout",
+     "customer_support": "Customer Support",
+     "customer_supprt_d": "If you need help or have questions about using Afghan Payment System, our support team is ready to assist you. We aim to respond as quickly as possible."
+    ,  "contact_us": "Contact Us",
+    "contact_us_d": "You can contact our support team through the app or via email. Please provide detailed information so we can assist you effectively.\nphone:+93779404681\nemail:ahmadullah.mukhlis@aps.gov.af",
+    "report_a_problem": "Report a Problem",
+    "report_a_problem_d": "If you notice any unusual activity or technical issues, please go to the support page and message us immediately. Your feedback helps us improve our service."
+,"app_updates": "App Updates",
+"app_updates_d": "We regularly update the app to improve performance, security, and features. Make sure you are using the latest version for the best experience."
+,"no_news_available": "No News available",
+"no_services_available": "No services available",
+"privacy_security_title": "Privacy & Security",
+  "information_we_collect_title": "Information We Collect",
+  "how_we_use_info_title": "How We Use Your Information",
+  "data_storage_title": "Data Storage and Protection",
+  "network_api_title": "Network and API Security",
+  "user_control_title": "User Control and Transparency",
+  "third_party_title": "Third-Party Services",
+  "updates_support_title": "Updates and Support",
+
+  "privacy_security_text": "At Afghan Payment System, your privacy and security are our highest priorities. We are committed to protecting your personal information and ensuring that your experience with our application is safe, secure, and transparent.",
+  "information_we_collect_text": "We only collect information that is necessary to provide and improve our services. This may include basic user details such as your name, email address, profile image, language preference, and app settings. We do not collect unnecessary personal data.",
+  "how_we_use_info_text": "Your information is used solely to enhance your experience within the app. This includes personalizing content, saving preferences, and delivering relevant notifications. We do not sell or share your personal data with third parties.",
+  "data_storage_text": "All sensitive data is securely stored using encrypted storage mechanisms. We follow industry-standard security practices to prevent unauthorized access, data loss, or misuse of information.",
+  "network_api_text": "Communication between your device and our servers is protected using secure network protocols. We continuously monitor our systems to minimize security risks.",
+  "user_control_text": "You have full control over your data. You can update your profile, change language or theme settings, and log out at any time. Locally stored data can be removed by logging out of the app.",
+  "third_party_text": "We may use trusted third-party services to support app functionality. These services comply with strict privacy and security standards.",
+   "updates_support_text": "This policy may be updated from time to time to reflect improvements or regulatory changes. If you have any questions or concerns, please contact our support team.",
+   "about_app_title": "About the App",
+     "about_app_content": "Afghan Payment System is a secure and user-friendly digital platform designed to simplify payments and financial interactions. Our goal is to provide fast, reliable, and accessible services for users across Afghanistan.",
+
+     "our_mission_title": "Our Mission",
+     "our_mission_content": "Our mission is to empower individuals and businesses by providing modern, secure, and transparent payment solutions that support financial inclusion and digital growth.",
+
+     "our_vision_title": "Our Vision",
+     "our_vision_content": "We envision a future where digital payments are accessible to everyone, helping communities grow and connect through safe and innovative technology.",
+
+     "security_trust_title": "Security & Trust",
+     "security_trust_content": "Security is at the core of Afghan Payment System. We use industry-standard practices to protect user data and ensure secure transactions at all times.",
+
+     "development_updates_title": "Development & Updates",
+     "development_updates_content": "The app is continuously improved with regular updates to enhance performance, security, and user experience based on feedback.",
+
+     "tagline": "Secure • Reliable • Simple",
+     "app_name": "Afghan Payment System",
+     "version_text": "Version 1.0.0",
+     "copyright_text": "© 2025 Afghan Payment System"
+
+
+
+
+}
