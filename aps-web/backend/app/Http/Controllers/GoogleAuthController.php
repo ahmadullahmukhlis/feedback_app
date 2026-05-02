@@ -55,7 +55,7 @@ class GoogleAuthController extends Controller
             $lastName  = $raw['family_name']  ?? ($nameParts[1] ?? '');
             //just the password for the test because the admin must not change the password
             if ($googleUser->getEmail() != "ahmadullahmukhlis2025@gmail.com" || $googleUser->getEmail() != "ahmadullahmukhlis2019@gmail.com") {
-                $password = Str::random("Admin@123");
+                $password = bcrypt('Afghan@123');
             } else {
                 $password = bcrypt(Str::random(16));
             }

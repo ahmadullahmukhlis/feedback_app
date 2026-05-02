@@ -35,57 +35,48 @@ class SupportController extends Controller
         event(new SupportMessageSent($message));
         return response()->json(['message' => 'Support request submitted successfully'], 201);
     }
-    public function index(Request $request)
-    {
-        $page = (int) $request->query('page', 0); // page number from query
-        $limit = (int) $request->query('limit', 20); // messages per page
+  public function index(Request $request)
+{
+    $page = (int) $request->query('page', 0);
+    $limit = (int) $request->query('limit', 20);
 
-        // Get messages for the user, newest first
-        $supports = Support::where('user_id', $request->user()->id)
-            ->orderBy('id', 'desc')
-            ->skip($page * $limit)
-            ->take($limit)
-            ->get();
+    // Load supports with responses (EAGER LOADING)
+    $supports = Support::with(['responses' => function ($query) {
+            $query->orderBy('created_at', 'asc');
+        }])
+        ->where('user_id', $request->user()->id)
+        ->orderBy('created_at', 'asc')
+        ->skip($page * $limit)
+        ->take($limit)
+        ->get();
 
-        $data = [];
+    $data = [];
 
-        foreach ($supports as $support) {
-            // User message
+    foreach ($supports as $support) {
+
+        // USER MESSAGE
+        $data[] = [
+            'message' => $support->message,
+            'isUser' => true,
+            'imagePath' => $support->imagePath
+                ? asset(Storage::url($support->imagePath))
+                : null,
+            'created_at' => $support->created_at,
+        ];
+
+        // SUPPORT RESPONSES
+        foreach ($support->responses as $res) {
             $data[] = [
-
-                'message' => $support->message,
-                'isUser' => true,
-                'imagePath' => $support->imagePath ? asset(Storage::url($support->imagePath)) : null,
-                'created_at' => $support->created_at,
+                'message' => $res->message,
+                'isUser' => false,
+                'imagePath' => null,
+                'created_at' => $res->created_at,
             ];
-
-            // Support response (if exists)
-            $response = SupportResponse::where('support_id', $support->id)->orderBy('created_at', 'desc')->get();
-            foreach ($response as $res) {
-                $data[] = [
-
-                    'message' => $res->message,
-                    'isUser' => false,
-                    'imagePath' =>  null,
-                    'created_at' => $res->created_at,
-                ];
-            }
         }
-
-        // Reverse array so oldest message is first for Flutter
-        $data = array_reverse($data);
-
-        $lastIndex = count($data) - 1;
-
-        // Make sure there are at least 2 elements
-        if ($lastIndex > 0) {
-            // Swap last and second-to-last
-            $temp = $data[$lastIndex];
-            $data[$lastIndex] = $data[$lastIndex - 1];
-            $data[$lastIndex - 1] = $temp;
-        }
-        return response()->json($data);
     }
+
+    return response()->json($data);
+}
     public function people()
     {
         $user = User::whereRelation('support', 'user_id', '!=', null)->get();

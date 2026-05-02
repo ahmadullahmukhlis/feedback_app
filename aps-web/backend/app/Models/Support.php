@@ -37,4 +37,8 @@ class Support extends Model
     {
         return $this->hasMany(SupportResponse::class, 'support_id', 'id');
     }
+    public function responses()
+{
+    return $this->hasMany(SupportResponse::class, 'support_id');
+}
 }
